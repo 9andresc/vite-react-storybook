@@ -1,12 +1,17 @@
 {
-  "rewrites": [
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build && npm run build-storybook",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "outputDirectory": "./build",
+  "routes": [
     {
-      "source": "/storybook",
-      "destination": "http://localhost:6006"
+      "src": "/storybook/(.*)",
+      "dest": "/storybook-static/index.html"
     },
     {
-      "source": "/",
-      "destination": "http://localhost:5173"
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
