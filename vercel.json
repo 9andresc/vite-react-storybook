@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/storybook*",
+      "destination": "http://localhost:6006*"
+    },
+    {
+      "source": "/*",
+      "destination": "http://localhost:5173*"
+    }
+  ]
+}
